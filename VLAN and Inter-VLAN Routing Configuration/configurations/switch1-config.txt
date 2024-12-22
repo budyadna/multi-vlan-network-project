@@ -1,0 +1,27 @@
+# Konfigurasi switch Cisco Layer 2 - Switch1
+# Versi Cisco IOS: 15.1
+# Menampilkan konfigurasi dasar switch
+# File ini digunakan sebagai contoh konfigurasi switch untuk proyek jaringan
+
+
+
+version 15.1
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+service compress-config
+!
+hostname Switch1
+!
+boot-start-marker
+boot-end-marker
+!
+!
+!
+username [username anda] privilege [skala ukuran akses 1-15] secret [password anda]
+no aaa new-model
+no ipv6 cef
+ipv6 multicast rpf use-bgp
+!
+ip cef
+!
